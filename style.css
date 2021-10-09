@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+:root {
+   --bg-violet: hsl(273, 75%, 66%);
+   --bg-blue: hsl(240, 73%, 65%);
+
+   --txt-darkGrey: hsl(237, 12%, 33%);
+   --txt-lightGrey: hsl(240, 6%, 50%);
+
+   --divide-grey: hsl(240, 5%, 91%);
+}
+
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+body {
+   font-family: "Kumbh Sans", sans-serif;
+   font-size: 12px;
+   background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%)) no-repeat;
+   width: 100vw;
+   height: 100vh;
+   display: grid;
+   place-items: center;
+}
+
+h1 {
+   margin-top: 33%;
+   text-align: center;
+}
+
+.container {
+   background-color: white;
+   /* max-height: 70vh; */
+   width: 90vw;
+   border-radius: 25px;
+   padding: 1.5rem;
+   position: relative;
+}
+
+.bg-pattern {
+   position: absolute;
+   top: 0%;
+   left: 50%;
+   transform: translate(-50%, -00%);
+}
+
+.il-women-online {
+   position: absolute;
+   top: 0%;
+   left: 50%;
+   transform: translate(calc(-50% - 9px), calc(-50% - 9px));
+}
+
+.accordion {
+   overflow: hidden;
+   margin: 1rem 0;
+}
+
+.accordion__label,
+.accordion__content {
+   padding: 1rem;
+}
+
+.accordion__label {
+   display: block;
+   cursor: pointer;
+   position: relative;
+   color: var(--txt-lightGrey);
+   transition: all 0.5s ease;
+}
+
+.accordion__label:hover {
+   color: coral;
+}
+
+.accordion__label:checked {
+   color: black;
+   font-weight: 700;
+}
+
+.accordion__label::after {
+   content: "";
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   right: 0.5rem;
+   width: 10px;
+   height: 6px;
+   background-image: url("./images/icon-arrow-down.svg");
+   transition: all 0.5s ease;
+}
+
+.accordion__content {
+   line-height: 1.6;
+   display: none;
+   color: var(--txt-lightGrey);
+}
+
+.accordion__input {
+   display: none;
+}
+
+.accordion__input:checked ~ .accordion__content {
+   display: block;
+}
+
+.accordion__input:checked ~ .accordion__label::after {
+   transform: translateY(-50%) rotate(180deg);
+}
