@@ -38,6 +38,7 @@ h1 {
    border-radius: 25px;
    padding: 1.5rem;
    position: relative;
+   margin-top: 2rem;
 }
 
 .bg-pattern {
@@ -76,7 +77,10 @@ h1 {
    color: coral;
 }
 
-.accordion__label:checked {
+/* TODO  */
+/* fix .accordion__label click  */
+
+.accordion__label:focus {
    color: black;
    font-weight: 700;
 }
@@ -97,6 +101,7 @@ h1 {
    line-height: 1.6;
    display: none;
    color: var(--txt-lightGrey);
+   padding-top: 0;
 }
 
 .accordion__input {
