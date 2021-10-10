@@ -27,7 +27,7 @@ body {
 }
 
 h1 {
-   margin-top: 33%;
+   margin-top: 45%;
    text-align: center;
    font-size: 2rem;
 }
@@ -48,20 +48,33 @@ hr {
    margin-top: 3rem;
    display: flex;
    flex-direction: column;
+   padding-top: 0;
 }
 
-.bg-pattern {
+.img-wrap {
+}
+
+.desktop-imgs {
+   display: none;
+}
+
+.mobile-imgs {
+   position: relative;
+   /* outline: 1px solid red; */
+}
+
+.bg-mb {
    position: absolute;
    top: 0%;
    left: 50%;
    transform: translate(-50%, -00%);
 }
 
-.il-women-online {
+.il-mb {
    position: absolute;
    top: 0%;
    left: 50%;
-   transform: translate(calc(-50% - 9px), calc(-50% - 9px));
+   transform: translate(-55%, -55%);
 }
 
 .accordion {
@@ -73,8 +86,6 @@ hr {
 .accordion__content {
    padding: 1rem 0;
 }
-
-/* TODO content smooth collapsing  */
 
 .accordion__label {
    display: block;
@@ -129,4 +140,58 @@ hr {
 
 .accordion__input:checked ~ .accordion__label::after {
    transform: translateY(-50%) rotate(180deg);
+}
+
+@media (min-width: 1024px) {
+   .container {
+      height: 65vh;
+      width: 65vw;
+      overflow: hidden;
+      position: relative;
+   }
+
+   .content-wrap {
+      width: 50%;
+      margin: auto 0 auto auto;
+      padding-right: 2rem;
+   }
+
+   h1 {
+      margin: 0 0 0 auto;
+      font-size: 1.8rem;
+      text-align: left;
+   }
+
+   .shadow-img {
+      position: absolute;
+      top: 50%;
+      left: 19%;
+   }
+
+   .shadow-img-mobile {
+      display: none;
+   }
+
+   .il-women-online {
+      position: absolute;
+      top: 50%;
+      left: 19%;
+   }
+
+   .mobile-il-img {
+      display: none;
+   }
+
+   .desktop-il-img {
+      display: block;
+      width: 90%;
+   }
+
+   .box-desktop-img {
+      display: block;
+      position: absolute;
+      left: -13%;
+      bottom: 25%;
+      z-index: 2;
+   }
 }
